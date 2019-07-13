@@ -788,7 +788,6 @@ Begin VB.Form CMDMAKER
          Height          =   375
          Left            =   2880
          TabIndex        =   38
-         ToolTipText     =   $"CMDMAKER.frx":000C
          Top             =   720
          Width           =   1215
       End
@@ -978,7 +977,6 @@ Begin VB.Form CMDMAKER
       MultiLine       =   -1  'True
       ScrollBars      =   3  'Both
       TabIndex        =   0
-      Text            =   "CMDMAKER.frx":004B
       Top             =   120
       Width           =   5175
    End

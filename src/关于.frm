@@ -16,7 +16,6 @@ Begin VB.Form 关于
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   Icon            =   "关于.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   3480
    ScaleWidth      =   4575
