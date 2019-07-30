@@ -8,7 +8,6 @@ Begin VB.Form Update
    ClientLeft      =   11685
    ClientTop       =   6540
    ClientWidth     =   4185
-   Icon            =   "Update.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   2505
    ScaleWidth      =   4185
@@ -17,7 +16,6 @@ Begin VB.Form Update
       Left            =   240
       MultiLine       =   -1  'True
       TabIndex        =   5
-      Text            =   "Update.frx":000C
       Top             =   4080
       Width           =   3735
    End

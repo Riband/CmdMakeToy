@@ -788,7 +788,6 @@ Begin VB.Form CMDMAKER
          Height          =   375
          Left            =   2880
          TabIndex        =   38
-         ToolTipText     =   $"CMDMAKER.frx":000C
          Top             =   720
          Width           =   1215
       End
@@ -978,7 +977,6 @@ Begin VB.Form CMDMAKER
       MultiLine       =   -1  'True
       ScrollBars      =   3  'Both
       TabIndex        =   0
-      Text            =   "CMDMAKER.frx":004B
       Top             =   120
       Width           =   5175
    End
@@ -1620,11 +1618,18 @@ Private Sub Form_Load()
     WindowFlag = True
 
 '创建TMP路径
-    Shell "cmd /c md " + App.Path + "\cmertmp\", vbHide
+If Dir(App.Path + "\cmertmp\") = "" Then
+    MkDir App.Path + "\cmertmp\"
+End If
+
 '创建TMP文件
 Do
     FileName = App.Path + "\cmertmp\tmp" + CStr(Minute(Time)) + CStr(Second(Time)) + ".cmd"
 Loop While Dir(FileName) <> "" '存在
+
+If Dir(FileName) = "" Then
+    Shell "cmd /c echo ::AutoCreated TMP File > " + FileName
+End If
 
      Open FileName For Output As #3
      Print #3, "@echo off"
